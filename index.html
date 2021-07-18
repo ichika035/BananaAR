@@ -1,9 +1,13 @@
 <!doctype HTML>
 <html>
+
+   
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+    
 <!-- A-Frame ライブラリ読み込み -->
 <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
 <!-- AR.js ライブラリ読み込み -->
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+ <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
 <body style='margin:0px; overflow:hidden;'>
 <!-- A-Frame -->
 <a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false">
@@ -18,6 +22,14 @@
         <a-obj-model id="banana" src="#bana-obj"  position="0 0 0" scale="0.3 0.3 0.3" rotation="0.5 0.3 0.2"></a-obj-model>
         <a-text value="hey,this is banana" position="0 3 0" align="center"></a-text>
     </a-marker>
+    
+     <a-marker preset="hiro">
+    <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#f00">
+      <a-animation attribute="position" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite">
+      </a-animation>
+    </a-sphere>
+  </a-marker>
+    
     <!-- カメラ -->
     <a-entity camera></a-entity>
 </a-scene>
