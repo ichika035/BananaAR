@@ -1,0 +1,26 @@
+<!doctype HTML>
+<html>
+<!-- A-Frame ライブラリ読み込み -->
+<script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+<!-- AR.js ライブラリ読み込み -->
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+<body style='margin:0px; overflow:hidden;'>
+<!-- A-Frame -->
+<a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false">
+    <!-- オブジェクトファイル読み込む マテリアルhaatoでやってみる -->
+    <a-assets>
+        <a-asset-item id="bana-obj" src="model.obj/banana/bana.obj"></a-asset-item>
+  
+    </a-assets>
+　　　　　　　　<!-- マーカー上になにを展開するかを書く -->
+   <a-marker type="pattern" url="pattern-test.patt">
+        
+        <a-obj-model id="banana" src="#bana-obj"  position="0 0 0" scale="0.3 0.3 0.3" rotation="0 0 0"></a-obj-model>
+        <a-text value="hey.this is banana" position="0  0" align="center"></a-text>
+    </a-marker>
+    <!-- カメラ -->
+    <a-entity camera></a-entity>
+</a-scene>
+<!-- A-Frameおわり -->
+</body>
+</html>
