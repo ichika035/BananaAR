@@ -13,21 +13,22 @@
 <a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false">
     <!-- オブジェクトファイル読み込む マテリアルhaatoでやってみる -->
     <a-assets>
-        <a-asset-item id="bana.obj" src="model.obj/banana/bana.obj"></a-asset-item>
+        <a-asset-item id="bana-obj" src="model.obj/banana/bana.obj"></a-asset-item>
   
     </a-assets>
 　　　　　　　　<!-- マーカー上になにを展開するかを書く -->
 
        <a-marker  preset="custom" type="pattern" url="pattern-test.patt">
         
-        <a-obj-model id="banana" src="#bana.obj"  position="0 0.2 0" scale="0.3 0.3 0.3" rotation="0.5 0.3 0.2">
+        <a-obj-model id="banana" src="#bana-obj"  position="0 0.2 0" scale="0.3 0.3 0.3" rotation="0.5 0.3 0.2">
        <a-animation attribute="position" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
-          <a-text value="hey,this is banana" position="0 2.5 0" align="center"></a-text>
+        
            </a-obj-model>
+            <a-text value="hey,this is banana" position="0 2.5 0" align="center"></a-text>
               </a-marker>
           
             <a-marker preset="hiro">
-    <a-obj-model id="banana" src="#bana.obj"  position="0 0 0" scale="0.05 0.05 0.05" rotation="0 0 0">
+    <a-obj-model id="banana" src="#bana-obj"  position="0 0 0" scale="0.05 0.05 0.05" rotation="0 0 0">
       <a-animation attribute="position" to="0 0.2 0" direction="alternate" dur="1000" repeat="indefinite"></a-animation>
     </a-obj-model>
   </a-marker>
